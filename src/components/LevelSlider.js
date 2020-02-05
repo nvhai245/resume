@@ -5,10 +5,6 @@ import Slider from "@material-ui/core/Slider";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    width: 300 + 24 * 2,
-    padding: 24
-  },
   margin: {
     height: theme.spacing(3)
   }
@@ -16,11 +12,11 @@ const useStyles = makeStyles(theme => ({
 
 const marks = [
   {
-    value: 40,
+    value: 30,
     label: 'Fresher',
   },
   {
-    value: 70,
+    value: 60,
     label: 'Intermediate',
   },
   {
@@ -29,26 +25,25 @@ const marks = [
   },
 ];
 
-function valuetext(value) {
-  return `${value}°C`;
-}
-
 const NoTrackSlider = withStyles({
   markActive: {
-    backgroundColor: "primary"
+    backgroundColor: "white"
+  },
+  markLabel: {
+    color: "white"
   }
 })(Slider);
 
-export default function LevelSlider() {
+export default function LevelSlider(props) {
   const classes = useStyles();
 
   return (
       <NoTrackSlider 
-      style={{width: "100%"}}
+      style={{width: "100%", color: props.color}}
       step={10} 
       valueLabelDisplay="on" 
       marks={marks} 
-      defaultValue={70}
+      value={props.level}
       />
   );
 }
