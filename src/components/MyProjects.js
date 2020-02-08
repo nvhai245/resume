@@ -112,14 +112,14 @@ export default function MyProjects() {
         </List>
       </Collapse>
 
-      <ListItem button onClick={handleClick2} style={{backgroundColor: "#75CEDE"}}>
+      <ListItem button onClick={handleClick3} style={{backgroundColor: "#75CEDE"}}>
         <ListItemIcon>
         <img src="https://img.icons8.com/color/48/000000/google-blog-search.png" style={{marginRight: "1rem"}} />
         </ListItemIcon>
         <ListItemText style={{color: "black"}} primary="A simple blog site using Golang and Reactjs" />
-        {open2 ? <ExpandLess /> : <ExpandMore />}
+        {open3 ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
-      <Collapse in={open2} timeout="auto" unmountOnExit>
+      <Collapse in={open3} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           <ListItem className={classes.nested}>
             <ListItemIcon>
