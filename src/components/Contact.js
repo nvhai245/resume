@@ -18,7 +18,6 @@ const useStyles = makeStyles(theme => ({
         display: "flex",
         alignItems: "flex-start",
         justifyContent: "flex-start",
-        marginBottom: "none",
         width: "60%",
         backgroundColor: "#424242",
         padding: theme.spacing(3),
