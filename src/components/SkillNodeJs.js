@@ -2,7 +2,22 @@ import React from 'react';
 
 function SkillNodeJs(props) {
     return (
-        <div></div>
+        <div className="skill-card-container">
+            <div className="skill-card">
+                <header className="skill-card__header"><img className="skill-card__icon"
+                                                            src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+                                                            alt="React Logo"/></header>
+                <section className="skill-card__body">
+                    <h2 className="skill-card__title">Nodejs</h2>
+                    <span className="skill-card__duration">1.5 years experience</span>
+                    <ul className="skill-card__knowledge">
+                        <li>ES6, Typescript</li>
+                        <li>Express, Passport</li>
+                        <li>Websocket, Socket.io,...</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
     );
 }
 

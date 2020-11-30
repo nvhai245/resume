@@ -2,7 +2,9 @@ import React from 'react';
 
 function Repositories(props) {
     return (
-        <div></div>
+        <div className="skill-card-container">
+            Repositories
+        </div>
     );
 }
 
