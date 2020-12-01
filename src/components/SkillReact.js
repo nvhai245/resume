@@ -11,10 +11,10 @@ function SkillReact(props) {
                     <h2 className="skill-card__title">React</h2><span
                     className="skill-card__duration">1.5 years experience</span>
                     <ul className="skill-card__knowledge">
-                        <li>Redux</li>
-                        <li>Material-UI, Semantic-UI, Bootstrap</li>
-                        <li>GraphQL</li>
-                        <li>Canvas</li>
+                        <li>Experience using React with Redux and React Context</li>
+                        <li>Develop fast websites using Material-UI, Semantic-UI, Bootstrap</li>
+                        <li>Experience using GraphQL with Apollo Client</li>
+                        <li>Can use ES6 and TypeScript</li>
                     </ul>
                 </section>
             </div>

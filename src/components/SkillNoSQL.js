@@ -8,8 +8,8 @@ function SkillNoSQL(props) {
                                                             src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Redis_Logo.svg"
                                                             alt="React Logo"/></header>
                 <section className="skill-card__body">
-                    <h2 className="skill-card__title">NoSQL Databases</h2><span
-                    className="skill-card__duration">1+ year experience</span>
+                    <h2 className="skill-card__title">NoSQL</h2><span
+                    className="skill-card__duration">1+ year experience using:</span>
                     <ul className="skill-card__knowledge">
                         <li>MongoDB</li>
                         <li>Redis</li>

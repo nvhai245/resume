@@ -16,7 +16,7 @@ export default function Education() {
                 <Timeline lineColor={'#ddd'}>
                     <TimelineItem
                         key="002"
-                        dateText="09/2016 – Now"
+                        dateText="10/2019"
                         dateInnerStyle={{ background: '#61b8ff', color: '#000' }}
                         bodyContainerStyle={{
                             background: 'none',
@@ -27,38 +27,6 @@ export default function Education() {
                             <div>
                                 <h2 style={{ color: '#61b8ff' }}>BACHELOR IN COMMERCE AND BUSINESS MANAGEMENT</h2>
                                 <h3 style={{ color: '#61b8ff' }}>NATIONAL ECONOMIC UNIVERSITY(NEU)</h3>
-                            </div>
-                        </Box>
-                    </TimelineItem>
-                    <TimelineItem
-                        key="004"
-                        dateText="08/2015 – 8/2016"
-                        dateInnerStyle={{ background: '#76bb7f' }}
-                        bodyContainerStyle={{
-                            background: 'none',
-                        }}
-                    >
-                    <Box style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
-                            <AccountBalanceIcon style={{color: "#76bb7f", fontSize: "5rem", marginRight: "1rem"}} />
-                            <div>
-                                <h2 style={{ color: '#76bb7f' }}>SOFTWARE DESIGN AND DEVELOPMENT COURSE</h2>
-                                <h3 style={{ color: '#76bb7f' }}>FPT POLYTECHNIC(FPT)</h3>
-                            </div>
-                    </Box>
-                    </TimelineItem>
-                    <TimelineItem
-                        key="004"
-                        dateText="08/2014 – 8/2015"
-                        dateInnerStyle={{ background: '#FFD845', color: '#000' }}
-                        bodyContainerStyle={{
-                            background: 'none',
-                        }}
-                    >
-                    <Box style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
-                            <ComputerIcon style={{color: "#FFD845", fontSize: "5rem", marginRight: "1rem "}} />
-                            <div>
-                                <h2 style={{ color: '#FFD845' }}>INFORMATION TECHNOLOGY(DROP OUT)</h2>
-                                <h3 style={{ color: '#FFD845' }}>HANOI UNIVERSITY(HANU)</h3>
                             </div>
                         </Box>
                     </TimelineItem>

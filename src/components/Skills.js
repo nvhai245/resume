@@ -28,12 +28,13 @@ export default function Skills() {
     return (
         <ScrollAnimation animateIn='bounceInRight' animateOnce={true}>
             <div fontFamily="Monospace" className={classes.root}>
-                {/*<Typography variant="h3" gutterBottom style={{textAlign: "center"}}>*/}
-                {/*    My Skills*/}
-                {/*</Typography>*/}
-                <Grid container spacing={3}>
+                <Typography variant="h3" gutterBottom style={{textAlign: "center"}}>
+                    My Skills
+                </Typography>
+                <Divider style={{background: "white", width: "50%", margin: "5% auto"}} />
+                <Grid container spacing={3} className="skill-set">
                     <Grid item xs={12}>
-                        <Typography variant="h5" gutterBottom style={{textAlign: "center"}}>
+                        <Typography variant="h4" gutterBottom style={{textAlign: "center"}}>
                             Front-end
                         </Typography>
                     </Grid>
@@ -43,8 +44,11 @@ export default function Skills() {
                     <Grid item xs={6}>
                         <SkillNextJs/>
                     </Grid>
+                </Grid>
+                <Divider style={{background: "white", width: "50%", margin: "5% auto"}} />
+                <Grid container spacing={3} className="skill-set">
                     <Grid item xs={12}>
-                        <Typography variant="h5" gutterBottom style={{textAlign: "center"}}>
+                        <Typography variant="h4" gutterBottom style={{textAlign: "center"}}>
                             Back-end
                         </Typography>
                     </Grid>

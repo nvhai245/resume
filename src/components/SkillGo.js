@@ -15,7 +15,7 @@ function SkillGo(props) {
                         <li>Building fast and secured web servers with Echo, Gin,..</li>
                         <li>Design, develop microservices with gRPC</li>
                         <li>Building REST and GraphQL APIs in Go</li>
-                        <li>Experience using Redis, Kafka,...</li>
+                        <li>Experience developing Go microservices with Redis, Kafka,...</li>
                     </ul>
                 </section>
             </div>

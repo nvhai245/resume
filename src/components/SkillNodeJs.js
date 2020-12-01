@@ -11,9 +11,10 @@ function SkillNodeJs(props) {
                     <h2 className="skill-card__title">Nodejs</h2>
                     <span className="skill-card__duration">1.5 years experience</span>
                     <ul className="skill-card__knowledge">
-                        <li>ES6, Typescript</li>
-                        <li>Express, Passport</li>
-                        <li>Websocket, Socket.io,...</li>
+                        <li>Experience using ES6, Typescript</li>
+                        <li>Building APIs server using Express, Passport,...</li>
+                        <li>Can design and build microservices with gRPC, graphQL,...</li>
+                        <li>Experience using Websocket, Socket.io,...</li>
                     </ul>
                 </section>
             </div>
