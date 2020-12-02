@@ -37,7 +37,7 @@ export default function Experience() {
     const classes = useStyles();
     return (
         <div>
-            <Box fontFamily="Monospace" style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
+            <Box style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
                 <Typography variant="h3" gutterBottom style={{ color: "white" }}>
                     Work Experience
                 </Typography>

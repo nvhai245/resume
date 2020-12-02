@@ -116,7 +116,7 @@
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .skill-card .skill-card__body {
-  height: 40px;
+  height: 60px;
   -webkit-transition: height 0.5s;
   transition: height 0.5s;
   overflow: hidden;
