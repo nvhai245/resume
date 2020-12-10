@@ -11,6 +11,8 @@ import Experience from './components/Experience';
 import MyProjects from './components/MyProjects';
 import Contact from './components/Contact';
 import { makeStyles } from '@material-ui/core/styles';
+import SideProjects from "./components/SideProjects";
+import {projectsData} from './json/data';
 
 const useStyles = makeStyles(theme => ({
   section: {
@@ -39,7 +41,7 @@ function App() {
             <Experience />
           </Box>
           <Box className={classes.section} id={`content-for-simple-tab-4`}>
-            <MyProjects />
+            <SideProjects />
           </Box>
           <Box id={`content-for-simple-tab-5`}>
             <Contact />

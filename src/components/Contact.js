@@ -12,6 +12,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import IconButton from '@material-ui/core/IconButton';
+import ContactForm from "./ContactForm";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -82,6 +83,27 @@ export default function Contact() {
                     </IconButton>
                 </Box>
             </Paper>
+            <div style={{width: "70%", display: "flex", justifyContent: "center"}}>
+                <div style={{width: "85%"}}>
+                    <ContactForm />
+                </div>
+                <div className="social">
+                    <div className="list-unstyled">
+                        <a href="https://twitter.com/Hari__N">
+                            <TwitterIcon style={{fontSize: "4rem"}} />
+                        </a>
+                        <a href="https://www.facebook.com/nvhai245">
+                            <FacebookIcon style={{fontSize: "4rem"}} />
+                        </a>
+                        <a href="https://github.com/nvhai245">
+                            <LinkedInIcon style={{fontSize: "4rem"}} />
+                        </a>
+                        <a href="https://www.instagram.com/nvhai245/">
+                            <InstagramIcon style={{fontSize: "4rem"}} />
+                        </a>
+                    </div>
+                </div>
+            </div>
         </Box>
     )
 }

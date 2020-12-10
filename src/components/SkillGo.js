@@ -11,7 +11,7 @@ function SkillGo(props) {
                     <h2 className="skill-card__title">Go</h2><span
                     className="skill-card__duration">1.5 years experience</span>
                     <ul className="skill-card__knowledge">
-                        <li>Have deep knowledge of Go data structures, concurrency, channels & goroutines</li>
+                        <li>Have deep knowledge of Go data structures, concurrency with channels & goroutines</li>
                         <li>Building fast and secured web servers with Echo, Gin,..</li>
                         <li>Design, develop microservices with gRPC</li>
                         <li>Building REST and GraphQL APIs in Go</li>
