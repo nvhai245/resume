@@ -10,45 +10,45 @@ import Education from './components/Education';
 import Experience from './components/Experience';
 import MyProjects from './components/MyProjects';
 import Contact from './components/Contact';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import SideProjects from "./components/SideProjects";
-import {projectsData} from './json/data';
+import {projects} from './json/data';
 
 const useStyles = makeStyles(theme => ({
-  section: {
-    marginBottom: "3rem"
-  }
+    section: {
+        marginBottom: "3rem"
+    }
 }));
 
 function App() {
-  const classes= useStyles();
-  return (
-    <div className="App">
-      <header className="App-header">
-        <PageBar />
-      </header>
-      <Container className={classes.root}>
-          <Box className={classes.section} id={`content-for-simple-tab-0`}>
-            <AboutMe />
-          </Box>
-          <Box className={classes.section} id={`content-for-simple-tab-1`}>
-            <Skills />
-          </Box>
-          <Box className={classes.section} id={`content-for-simple-tab-2`}>
-            <Education />
-          </Box>
-          <Box className={classes.section} id={`content-for-simple-tab-3`}>
-            <Experience />
-          </Box>
-          <Box className={classes.section} id={`content-for-simple-tab-4`}>
-            <SideProjects />
-          </Box>
-          <Box id={`content-for-simple-tab-5`}>
-            <Contact />
-          </Box>
-      </Container>
-    </div>
-      );
-    }
-    
-    export default App;
+    const classes = useStyles();
+    return (
+        <div className="App">
+            <header className="App-header">
+                <PageBar/>
+            </header>
+            <Container className={classes.root}>
+                <Box className={classes.section} id={`content-for-simple-tab-0`}>
+                    <AboutMe/>
+                </Box>
+                <Box className={classes.section} id={`content-for-simple-tab-1`}>
+                    <Skills/>
+                </Box>
+                <Box className={classes.section} id={`content-for-simple-tab-2`}>
+                    <Education/>
+                </Box>
+                <Box className={classes.section} id={`content-for-simple-tab-3`}>
+                    <Experience/>
+                </Box>
+                <Box className={classes.section} id={`content-for-simple-tab-4`}>
+                    <SideProjects projects={projects}/>
+                </Box>
+                <Box id={`content-for-simple-tab-5`}>
+                    <Contact/>
+                </Box>
+            </Container>
+        </div>
+    );
+}
+
+export default App;

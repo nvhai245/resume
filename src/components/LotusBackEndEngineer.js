@@ -34,18 +34,18 @@ function LotusBackEndEngineer(props) {
                                 reply based on user's settings...)</i></li>
                             <li><i>Delivered Bot APIs system for third-party access</i></li>
                         </ul>
-                    </ul>
-                    <ul className="skill-card__knowledge">
                         <h2 style={{color: "#4285F4"}}><strong>Technologies used:</strong></h2>
-                        <li><i>Languages: Go, Javascript</i></li>
-                        <li><i>Frameworks: microservices(gRPC), Echo, Gin, ReactJS, Kafka,...</i></li>
-                        <li><i>Databases: MySQL, PostgreSQL, Redis,...</i></li>
-                    </ul>
-                    <ul className="skill-card__knowledge">
+                        <ul className="skill-card__knowledge">
+                            <li><i>Languages: Go, Javascript</i></li>
+                            <li><i>Frameworks: microservices(gRPC), Echo, Gin, ReactJS, Kafka,...</i></li>
+                            <li><i>Databases: MySQL, PostgreSQL, Redis,...</i></li>
+                        </ul>
                         <h2 style={{color: "#4285F4"}}><strong>Skills developed during working time:</strong></h2>
-                        <li><i>Co-operate and team-work efficiently</i></li>
-                        <li><i>Working with different teams in a project to achieve team's goals</i></li>
-                        <li><i>Working under high pressure and deadlines...</i></li>
+                        <ul className="skill-card__knowledge">
+                            <li><i>Co-operate and team-work efficiently</i></li>
+                            <li><i>Working with different teams in a project to achieve team's goals</i></li>
+                            <li><i>Working under high pressure and deadlines...</i></li>
+                        </ul>
                     </ul>
                 </section>
             </div>

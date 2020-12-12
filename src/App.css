@@ -137,6 +137,7 @@
 .skill-card .skill-card__body .skill-card__knowledge {
   margin-top: 10px;
   color: white;
+  margin-bottom: 2%;
 }
 .skill-card .skill-card__body .skill-card__knowledge li {
   font-size: 110%;
@@ -189,7 +190,7 @@ body {
 .btn--outline:hover {
   background-color: #FF9908;
   border-color: #FF9908;
-  color: #FFFFFF;
+  color: #D6D6D6;
 }
 
 .card {
@@ -199,6 +200,7 @@ body {
   max-width: 400px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin: 0 20px;
+  height: 100%;
 }
 
 .card:hover {
@@ -293,7 +295,7 @@ body {
 }
 
 .contact-card {
-  background-color: #fff;
+  background-color: #D6D6D6;
   width: 100%;
   padding: 20px;
   border-radius: 1px;
@@ -314,7 +316,7 @@ body {
 .contact-card .toggle-button {
   position: absolute;
   border: none;
-  background: #fff;
+  background: #D6D6D6;
   padding: 5px 10px;
   cursor: pointer;
   width: 50px;
@@ -368,13 +370,14 @@ body {
   border-radius: 3px;
   box-shadow: inset 0 1px 2px #cccccc05;
   border: 1px solid #ccc;
+  background-color: #D6D6D6;
 }
 .my-form .field textarea {
   max-width: 500px;
 }
 .my-form button {
   background-color: #406ded;
-  color: #fff;
+  color: #D6D6D6;
   font-size: 1.2rem;
   border: none;
   padding: 10px 20px;
@@ -384,6 +387,7 @@ body {
 .social {
   background: #00A0FF;
   width: 10%;
+  height: 80%;
   text-align: center;
   border-radius: 15px;
   display: flex;
@@ -391,10 +395,7 @@ body {
   justify-content: center;
 }
 
-.list-unstyled a {
+.list-unstyled .contact-icon {
   font-size: 50%;
   color: white;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50%;
 }

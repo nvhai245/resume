@@ -1,8 +1,8 @@
 import React from 'react';
 
-function ProjectCard(props) {
+function ProjectCard({projectInfo, projectName, projectSrc}) {
     return (
-        <div className="card ">
+        <div className="card " onClick={() => window.open(projectSrc, '_blank')}>
             <div className="card__icon">
                 <svg
                     width="256px"
@@ -20,13 +20,12 @@ function ProjectCard(props) {
                     </g>
                 </svg>
             </div>
-            <button className="btn card__ribbon ribbon"/>
-            <h1 className="card__title">Git Hub</h1>
+            <button className="btn card__ribbon ribbon" style={projectName === "kingtalk-bot-api" ? {backgroundColor: "#FF9908", borderColor: "#FF9908"} : {}} />
+            <h1 className="card__title">{projectName}</h1>
             <p className="card__description">
-                Github is where people build software. More than 18 million people use
-                GitHub to discover, fork and contribute to over 48 million projects.
+                {projectInfo}
             </p>
-            <button className="btn btn--outline">View</button>
+            <button onClick={() => window.open(projectSrc, '_blank')} className="btn btn--outline">View</button>
         </div>
     );
 }

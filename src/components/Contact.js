@@ -35,72 +35,27 @@ export default function Contact() {
             <Typography variant="h3" gutterBottom style={{ color: "white" }}>
                 Contact Me
             </Typography>
-            <Paper elevation={3} className={classes.root}>
-                <Box style={{display: "flex", alignItems: "center", justifyContent: "flex-start"}}>
-                    <HomeIcon style={{ fontSize: "3rem", marginRight: "0.5rem" }} />
-                    <Typography variant="h6">
-                        Address:
-                    </Typography>
-                    <Typography style={{ display: "inline", marginLeft: "3rem" }}>
-                        Minh Khai, Hai Ba Trung, Ha Noi, Vietnam
-                    </Typography>
-                </Box>
-
-                <Box style={{display: "flex", alignItems: "center", justifyContent: "flex-start"}}>
-                    <EmailIcon style={{ fontSize: "3rem", marginRight: "0.5rem" }} />
-                    <Typography variant="h6">
-                        Email:
-                    </Typography>
-                    <Typography style={{ display: "inline", marginLeft: "5rem" }}>
-                        nvhai245@gmail.com
-                    </Typography>
-                </Box>
-
-                <Box style={{display: "flex", alignItems: "center", justifyContent: "flex-start"}}>
-                    <PhoneIcon style={{ fontSize: "3rem", marginRight: "0.5rem" }} />
-                    <Typography variant="h6">
-                        Phone:
-                    </Typography>
-                    <Typography style={{ display: "inline", marginLeft: "5rem" }}>
-                        0374 116 741
-                    </Typography>
-                </Box>
-                <Box style={{display: "flex", alignItems: "center", justifyContent: "center", margin: "1rem auto"}}>
-                    <IconButton onClick={() => window.open('https://github.com/nvhai245', '_blank')}>
-                        <GitHubIcon style={{fontSize: "4rem"}} />
-                    </IconButton>
-                    <IconButton onClick={() => window.open('https://www.facebook.com/nvhai245', '_blank')}>
-                        <FacebookIcon style={{fontSize: "4rem"}} />
-                    </IconButton>
-                    <IconButton onClick={() => window.open('https://www.instagram.com/nvhai245/', '_blank')}>
-                        <InstagramIcon style={{fontSize: "4rem"}} />
-                    </IconButton>
-                    <IconButton onClick={() => window.open('https://github.com/nvhai245', '_blank')}>
-                        <LinkedInIcon style={{fontSize: "4rem"}} />
-                    </IconButton>
-                    <IconButton onClick={() => window.open('https://twitter.com/Hari__N', '_blank')}>
-                        <TwitterIcon style={{fontSize: "4rem"}} />
-                    </IconButton>
-                </Box>
-            </Paper>
-            <div style={{width: "70%", display: "flex", justifyContent: "center"}}>
+            <div style={{width: "70%", display: "flex", justifyContent: "center", marginBottom: "5%", alignItems: "center"}}>
                 <div style={{width: "85%"}}>
                     <ContactForm />
                 </div>
                 <div className="social">
                     <div className="list-unstyled">
-                        <a href="https://twitter.com/Hari__N">
-                            <TwitterIcon style={{fontSize: "4rem"}} />
-                        </a>
-                        <a href="https://www.facebook.com/nvhai245">
+                        <IconButton className="contact-icon" onClick={() => window.open('https://github.com/nvhai245', '_blank')}>
+                            <GitHubIcon style={{fontSize: "4rem"}} />
+                        </IconButton>
+                        <IconButton className="contact-icon" onClick={() => window.open('https://www.facebook.com/nvhai245', '_blank')}>
                             <FacebookIcon style={{fontSize: "4rem"}} />
-                        </a>
-                        <a href="https://github.com/nvhai245">
-                            <LinkedInIcon style={{fontSize: "4rem"}} />
-                        </a>
-                        <a href="https://www.instagram.com/nvhai245/">
+                        </IconButton>
+                        <IconButton className="contact-icon" onClick={() => window.open('https://www.instagram.com/nvhai245/', '_blank')}>
                             <InstagramIcon style={{fontSize: "4rem"}} />
-                        </a>
+                        </IconButton>
+                        <IconButton className="contact-icon" onClick={() => window.open('https://github.com/nvhai245', '_blank')}>
+                            <LinkedInIcon style={{fontSize: "4rem"}} />
+                        </IconButton>
+                        <IconButton className="contact-icon" onClick={() => window.open('https://twitter.com/Hari__N', '_blank')}>
+                            <TwitterIcon style={{fontSize: "4rem"}} />
+                        </IconButton>
                     </div>
                 </div>
             </div>
