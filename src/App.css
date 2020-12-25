@@ -61,7 +61,7 @@
   height: 36vh;
 }
 .skill-card:hover .exp-skill {
-  height: 75vh;
+  height: 600px;
 }
 .skill-card:hover .skill-card__body .skill-card__knowledge li {
   -webkit-transform: translateX(0);
@@ -361,6 +361,7 @@ body {
 }
 .my-form .field input,
 .my-form .field textarea {
+  font-family: "Monsterrat";
   font-size: 1.2rem;
   font-weight: 300;
   width: 100%;
@@ -385,7 +386,7 @@ body {
 }
 
 .social {
-  background: #00A0FF;
+  background: transparent;
   width: 10%;
   height: 80%;
   text-align: center;

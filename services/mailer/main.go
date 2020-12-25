@@ -8,6 +8,9 @@ import (
 )
 
 func mailToMyself(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Access-Control-Allow-Headers", "Accept, Accept-Language, Content-Type")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+
 	query := req.URL.Query()
 	email := query.Get("email")
 	message := query.Get("message")
@@ -39,7 +42,6 @@ func mailToMyself(w http.ResponseWriter, req *http.Request) {
 
 	fmt.Println("Email Sent!")
 	w.WriteHeader(200)
-	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Write([]byte("sent message successful!"))
 }
 

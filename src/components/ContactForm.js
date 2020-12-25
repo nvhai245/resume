@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import DoneOutlineIcon from '@material-ui/icons/DoneOutline';
 
 const ToggleButton = ({clickFn = null, classNames = ""}) => (
     <button className={classNames} type="button" onClick={clickFn}>
@@ -34,29 +36,67 @@ function ContactFlipForm({title, lazyLoad, frontContent, backContent}) {
     );
 }
 
-const MyForm = () => (
-    <form className="my-form" action="" method="post">
-        <div className="field">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required/>
-        </div>
-        <div className="field">
-            <label for="email">Email</label>
-            <input type="email" name="eemail" id="email" required/>
-        </div>
-        <div className="field">
-            <label for="name">Message</label>
-            <textarea rows="5" name="msg" id="msg" required/>
-        </div>
-        <button>Send</button>
-    </form>
-);
+const MyForm = () => {
+    const [name, setName] = useState(""),
+        [email, setEmail] = useState(""),
+        [message, setMessage] = useState(""),
+        [pending, setPending] = useState(false),
+        [result, setResult] = useState("");
 
-const DummyContent = () => (
+    const handleNameChange = (e) => {
+        setName(e.target.value)
+    }
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value)
+    }
+    const handleMessageChange = (e) => {
+        setMessage(e.target.value)
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setPending(true)
+        fetch(`http://35.229.49.56:8080/mail?name=${name}&&email=${email}&&message=${message}`, {method: "POST"})
+            .then(response => {
+                console.log(response)
+                setPending(false)
+                if (response.status === 200) {
+                    setResult("Message sent!")
+                } else if (response.status === 500) {
+                    setResult("Network error! Please try again!")
+                }
+            })
+    }
+    return (
+        <form onSubmit={handleSubmit} className="my-form" action="" method="post">
+            <div className="field">
+                <label for="name">Name</label>
+                <input onChange={handleNameChange} type="text" name="name" id="name" required/>
+            </div>
+            <div className="field">
+                <label for="email">Email</label>
+                <input onChange={handleEmailChange} type="email" name="eemail" id="email" required/>
+            </div>
+            <div className="field">
+                <label for="name">Message</label>
+                <textarea onChange={handleMessageChange} rows="5" name="msg" id="msg" required/>
+            </div>
+            <button type="submit" style={{marginRight: "2%"}}>Send</button>
+            {pending && <CircularProgress />}
+            {result !== "" && !pending  &&
+            <span style={{color: result === "Message sent!" ? "blue" : "red"}}>
+                {result === "Message sent!" && <DoneOutlineIcon style={{color: "green"}} />}
+                {result}
+            </span>
+            }
+        </form>
+    )
+};
+
+const MyVid = () => (
     <iframe
         width="100%"
         height="100%"
-        src="https://www.youtube.com/embed/lZ-O5K6ssII"
+        src="https://www.youtube.com/embed/yXqW2igE8-4"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
@@ -68,7 +108,7 @@ function ContactForm() {
         <ContactFlipForm
             title="Send Me An Email"
             frontContent={<MyForm/>}
-            backContent={<DummyContent/>}
+            backContent={<MyVid />}
             lazyLoad={true}
         />
     );
