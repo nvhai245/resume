@@ -20,7 +20,7 @@ function ProjectCard({projectInfo, projectName, projectSrc}) {
                     </g>
                 </svg>
             </div>
-            <button className="btn card__ribbon ribbon" style={projectName === "kingtalk-bot-api" ? {backgroundColor: "#FF9908", borderColor: "#FF9908"} : {}} />
+            <button className={projectName === "kingtalk-bot-api" ? "btn card__ribbon ribbon2" : "btn card__ribbon ribbon"} style={projectName === "kingtalk-bot-api" ? {backgroundColor: "#FF9908", borderColor: "#FF9908"} : {}} />
             <h1 className="card__title">{projectName}</h1>
             <p className="card__description">
                 {projectInfo}

@@ -46,7 +46,7 @@ export default function Experience() {
                         <Timeline lineColor={'#ddd'}>
                             <TimelineItem
                                 key="002"
-                                dateText="Feb 2019 - "
+                                dateText="Feb 2020 - "
                                 dateInnerStyle={{ background: '#61b8ff', color: '#000' }}
                                 bodyContainerStyle={{
                                     background: 'none',

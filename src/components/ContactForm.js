@@ -106,7 +106,7 @@ const MyVid = () => (
 function ContactForm() {
     return (
         <ContactFlipForm
-            title="Send Me An Email"
+            title="Send Me A Message"
             frontContent={<MyForm/>}
             backContent={<MyVid />}
             lazyLoad={true}

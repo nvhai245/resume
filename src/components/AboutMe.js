@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
+import {IconButton} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -11,7 +14,7 @@ const useStyles = makeStyles(theme => ({
             margin: theme.spacing(3),
         },
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         flexWrap: "wrap",
     },
     huge: {
@@ -19,17 +22,21 @@ const useStyles = makeStyles(theme => ({
         height: theme.spacing(45),
     },
     introduction: {
-        maxWidth: "40%",
+        maxWidth: "57%",
     }
 }));
 
 export default function AboutMe() {
     const classes = useStyles();
+    const [reveal, setReveal] = useState(false)
+    const handleReveal = () => {
+        setReveal(prevState => !prevState)
+    }
     return (
         <div className={classes.root}>
             <Avatar
                 alt="Hari N"
-                src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/p960x960/82612994_853187251768413_6789819364800462848_o.jpg?_nc_cat=102&_nc_ohc=0GozKCxKQuAAX8IlYWV&_nc_ht=scontent.fhan2-3.fna&_nc_tp=6&oh=84815c50e7cf1137a1abd1f472cc0918&oe=5EDC26A3"
+                src="https://storage.googleapis.com/fresh-meme/74938769_785028741917598_4324800448075661312_o.jpg"
                 className={classes.huge}
             />
             <Box className={classes.introduction}>
@@ -43,8 +50,19 @@ export default function AboutMe() {
             </Typography>
             <Typography component="div" style={{ color: "white" }}>
                 <Box fontFamily="Monospace" fontSize="h6.fontSize" m={1}>
-                    My name is Hai Nguyen. I am a Fullstack Website Developer, specializing in web, desktop, mobile design and development.
-                    I always maintain a healthy balance between functionality and visual impact in all of my works.
+                        My name is Hai Nguyen. I am a Back-end/Fullstack Website Developer, specializing APIs design and microservices development.
+                        I always maintain a healthy balance between functionality and visual impact in all of my works.
+                    <br />
+                    <ul>
+                        <li>
+                            Facebook: <a style={{color: "white"}} href="https://www.facebook.com/nvhai245" target="_blank">/nvhai245</a>
+                        </li>
+                        <li>
+                            Phone number: <strong>{reveal ? "0374116741" : "*******741"}</strong><IconButton style={{color: "white"}} onClick={handleReveal}>{
+                                reveal ? <VisibilityIcon /> : <VisibilityOffIcon />
+                        }</IconButton>
+                        </li>
+                    </ul>
                 </Box>
             </Typography>
             </Box>
