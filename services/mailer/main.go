@@ -11,6 +11,8 @@ func mailToMyself(w http.ResponseWriter, req *http.Request) {
 	query := req.URL.Query()
 	email := query.Get("email")
 	message := query.Get("message")
+	name := query.Get("name")
+	fmt.Println("name: ", name)
 	fmt.Println("email: ", email)
 	fmt.Println("message: ", message)
 
@@ -23,7 +25,7 @@ func mailToMyself(w http.ResponseWriter, req *http.Request) {
 	m.SetHeader("From", user)
 	m.SetHeader("To", "nvhai245@gmail.com")
 	m.SetHeader("Subject", "A new resume visitor")
-	m.SetBody("text/html", fmt.Sprintf("<b>Visitor <i>%s<i> has sent: </b><div>%s</div>", email, message))
+	m.SetBody("text/html", fmt.Sprintf("Visitor <b>%s</b> from <b><i>%s<i></b> has sent: <div>%s</div>", name, email, message))
 
 	d := gomail.NewDialer("smtp.gmail.com", 587, user, password)
 
@@ -37,6 +39,7 @@ func mailToMyself(w http.ResponseWriter, req *http.Request) {
 
 	fmt.Println("Email Sent!")
 	w.WriteHeader(200)
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Write([]byte("sent message successful!"))
 }
 
